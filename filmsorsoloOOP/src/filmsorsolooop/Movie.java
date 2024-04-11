@@ -2,6 +2,7 @@ package filmsorsolooop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
 public class Movie {
 
     static String kiir() {
@@ -17,16 +18,15 @@ public class Movie {
     private Integer ageLimit;
 
     private static ArrayList<String> avalibeGerne = new ArrayList(
-            Arrays.asList("Horror", "Comedy", "Akció")
+            Arrays.asList("horror", "comedy", "akció")
     );
-    
+
     //Konstruktor
     public Movie(String title, Integer length, String director, Double rating, String gerne, Integer ageLimit) {
-        
-        //Műfaj enum vizsgálat
 
+        //Műfaj enum vizsgálat
         this.title = title;
-        this.length = length < 0 ? 0 : length ;
+        this.length = length < 0 ? 0 : length;
         this.director = director;
         this.rating = rating < 1.0 || rating > 10.0 ? 1.0 : rating;
         this.gerne = this.avalibeGerne.contains(gerne.toLowerCase()) ? gerne.toLowerCase() : "Invalid category";
@@ -61,38 +61,42 @@ public class Movie {
     public static ArrayList<String> getAvalibeGerne() {
         return avalibeGerne;
     }
-    
 
     //setterek
+    /**
+     *
+     * @param newRating
+     * @throws InvalidRatingException
+     */
     public void setRating(Double newRating) throws InvalidRatingException {
         if (newRating < 1.0) {
             throw new InvalidRatingException("Túl kicsi a rating");
-        } else if (newRating> 10.0) {
+        } else if (newRating > 10.0) {
             throw new InvalidRatingException("Túl nagy a rating");
         } else {
-            this.rating= newRating;
+            this.rating = newRating;
         }
     }
-    public static Boolean addCategory(String category) {
+
+    public static Boolean addCategory(String category) throws InvalidGerneException{
         category = category.toLowerCase();
         Boolean toReturn = false;
-        
+
         if (!avalibeGerne.contains(category)) {
             avalibeGerne.add(category);
-            toReturn=true;
-            
+            toReturn = true;
+        } else{
+            throw new InvalidGerneException("Ilyen műfaj már létezik");
         }
-          
+
         return toReturn;
     }
-    public static void kiir(String kiiratas)
-  {
-      kiiratas = kiiratas.toLowerCase();
-    for( int i = 0; i < avalibeGerne.size(); i++ )
-    {
-      System.out.print( avalibeGerne.get(i)+", " );
-    }
-    toReturn = true;
-  } 
+
+//    public static void kiir(String kiiratas) {
+//        kiiratas = kiiratas.toLowerCase();
+//        for (int i = 0; i < avalibeGerne.size(); i++) {
+//            System.out.print(avalibeGerne.get(i) + ", ");
+//        }
+//    }
 
 }
