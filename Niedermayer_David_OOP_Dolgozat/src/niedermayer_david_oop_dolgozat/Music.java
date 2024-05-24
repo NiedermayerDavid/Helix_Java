@@ -1,4 +1,4 @@
-package niedermayer_dávid_oop_dolgozat;
+package niedermayer_david_oop_dolgozat;
 
 public class Music {
 
@@ -10,7 +10,7 @@ public class Music {
     private String properties;
     
 
-    public Music(String title, String author, String contributor, Integer minute, Integer second, String Properties) {
+    public Music(String title, String author, String contributor, Integer minute, Integer second, String properties) {
         this.title = title;
         this.author = author;
         this.contributor = contributor;

@@ -1,4 +1,4 @@
-package niedermayer_dávid_oop_dolgozat;
+package niedermayer_david_oop_dolgozat;
 
 import java.util.ArrayList;
 import java.util.Random;

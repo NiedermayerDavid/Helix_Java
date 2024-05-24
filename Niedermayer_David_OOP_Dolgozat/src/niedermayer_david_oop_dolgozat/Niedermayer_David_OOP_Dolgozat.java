@@ -1,7 +1,7 @@
-package niedermayer_dávid_oop_dolgozat;
+package niedermayer_david_oop_dolgozat;
 
 
-public class Niedermayer_Dávid_OOP_Dolgozat {
+public class Niedermayer_David_OOP_Dolgozat {
 
     public static void main(String[] args) {
         
