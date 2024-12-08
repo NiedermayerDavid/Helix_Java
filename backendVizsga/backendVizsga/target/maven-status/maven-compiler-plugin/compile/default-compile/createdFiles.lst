@@ -1,0 +1,12 @@
+com\iakk\backendvizsga\controller\UserController.class
+com\iakk\backendvizsga\controller\ApplicationConfig.class
+com\iakk\backendvizsga\model\Ticket.class
+com\iakk\backendvizsga\service\UserService.class
+com\iakk\backendvizsga\model\UserXAddress.class
+com\iakk\backendvizsga\model\Purchase.class
+com\iakk\backendvizsga\model\Event.class
+com\iakk\backendvizsga\model\User.class
+com\iakk\backendvizsga\model\Address.class
+com\iakk\backendvizsga\config\JWT.class
+com\iakk\backendvizsga\model\Place.class
+com\iakk\backendvizsga\model\TicketCategory.class
